@@ -1,0 +1,120 @@
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$colorGreyLight1: #f7f7f7;
+
+.centerText {
+  text-align: center;
+}
+
+.marginBottom8 {
+  margin-bottom: 8rem;
+}
+
+.headingSecondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+  letter-spacing: 0.2rem;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.05);
+    text-shadow: 0.5rem 1rem 2rem rgba(rgb(29, 29, 29), 0.2);
+  }
+}
+
+.sectionStories {
+  padding: 15rem 0;
+
+  position: relative;
+}
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rbga(black, 0.1);
+  background-color: white;
+  border-radius: 3px;
+  padding: 6rem;
+  font-size: 1.6rem;
+  padding-left: 9rem;
+  transform: skewX(-12deg);
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    transform: skewX(12deg);
+    overflow: hidden;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+
+    position: relative;
+  }
+
+  &__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &__text {
+    transform: skewX(12deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+}
+
+.marginBottomSmall {
+  margin-bottom: 1.5rem;
+}
+
+.bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  &__content {
+  }
+}

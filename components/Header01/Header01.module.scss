@@ -1,0 +1,95 @@
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-white: #fff;
+
+.header {
+  height: 95vh; /* 95% */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(./back.jpg);
+  background-size: cover; /* resize */
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; /* for logobox, on absolute */
+  font-size: 62.5%; /* fix for all rem*/
+
+  &__logoBox {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__textBox {
+    /* center title & btn */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+.headingPrimary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden; /* remove animation shaking anim */
+  margin-bottom: 6rem;
+
+  &__main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    animation: moveInLeft 1s ease-out; /*duration timing-function delay iteration-count direction fill-mode;*/
+  }
+
+  &__sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+
+    animation: moveInRight 1s ease-out; /*duration timing-function delay iteration-count direction fill-mode;*/
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
