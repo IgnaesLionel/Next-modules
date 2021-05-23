@@ -8,7 +8,7 @@ const Stories = () => {
   return (
     <section className={classes.sectionStories}>
       <div className={classes.bgVideo}>
-        <video className={classes.bgVideo___content} autoPlay loop muted>
+        <video className={classes.bgVideo__content} autoPlay loop muted>
           <source src="/video.mp4" type="video/mp4" />
           <source src="/video.webm" type="video/webm" />
           Your browser is not supported!

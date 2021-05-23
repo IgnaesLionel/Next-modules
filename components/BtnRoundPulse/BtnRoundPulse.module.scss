@@ -3,6 +3,7 @@ $color-white: #fff;
 $color-primary-dark: #28b485;
 
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -13,6 +14,9 @@ $color-primary-dark: #28b485;
     transition: all 0.2s; /* linked to transform */
     position: relative;
     font-size: 1.6rem;
+
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -25,7 +29,9 @@ $color-primary-dark: #28b485;
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   }
