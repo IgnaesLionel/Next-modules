@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./BtnRoundPulse.module.scss";
 
-const BtnPulse = ({ text, color }) => {
+const BtnPulse = ({ text, color, path }) => {
   let selectedColor = "";
 
   if (color == "white") {
@@ -13,7 +13,7 @@ const BtnPulse = ({ text, color }) => {
   }
   return (
     <a
-      href="#"
+      href={`${path}`}
       className={`${classes.btn} ${selectedColor} ${classes.btn__animated}`}
     >
       {text}

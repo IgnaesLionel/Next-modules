@@ -9,12 +9,27 @@ import Stories from "../components/Stories/Stories";
 import Booking from "../components/Booking/Booking";
 import BackgroundVideo from "../components/BackgroundVideo/BackgroundVideo";
 import Footer00 from "../components/Footer00/Footer00";
+import FullScreenMenu from "../components/FullScreenMenu/FullScreenMenu";
+import PopUp00 from "../components/PopUp00/PopUp00";
 
 export default function Home() {
   return (
     <div>
+      <FullScreenMenu />
       <Header01 />
-      {/*  <section className="grid-test">
+
+      <About />
+      <FourSquareInfo />
+      <ThreeCardsBuy />
+      <Stories />
+      <Booking />
+      <Footer00 />
+      <PopUp00 />
+    </div>
+  );
+}
+
+/*  <section className="grid-test">
         <div className="row">
           <div className="col-1-of-2">Col 1 of 2</div>
           <div className="col-1-of-2">Col 1 of 2</div>
@@ -48,13 +63,4 @@ export default function Home() {
           <div className="col-1-of-4">Col 1 of 4</div>
           <div className="col-3-of-4">Col 3 of 4</div>
         </div>
-  </section> */}
-      <About />
-      <FourSquareInfo />
-      <ThreeCardsBuy />
-      <Stories />
-      <Booking />
-      <Footer00 />
-    </div>
-  );
-}
+  </section> */

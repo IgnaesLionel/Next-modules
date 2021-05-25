@@ -6,7 +6,7 @@ import BtnSquareArrow from "../BtnSquareArrow/BtnSquareArrow";
 
 const Stories = () => {
   return (
-    <section className={classes.sectionStories}>
+    <section className={classes.sectionStories} id="section-stories">
       <div className={classes.bgVideo}>
         <video className={classes.bgVideo__content} autoPlay loop muted>
           <source src="/video.mp4" type="video/mp4" />

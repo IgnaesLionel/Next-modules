@@ -4,7 +4,7 @@ import classes from "./ThreeCardsBuy.module.scss";
 
 const ThreeCardsBuy = () => {
   return (
-    <section className={classes.sectionTours}>
+    <section className={classes.sectionTours} id="section-tours">
       <div className={classes.centerText}>
         <h2 className={`${classes.marginBottom8} ${classes.headingSecondary}`}>
           Most popular tours
@@ -46,7 +46,7 @@ const ThreeCardsBuy = () => {
                   <p className={classes.card__priceValue}>$297</p>
                 </div>
 
-                <BtnRoundPulse text="BOOK NOW!" color="white" />
+                <BtnRoundPulse text="BOOK NOW!" color="white" path="#popup" />
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@ const ThreeCardsBuy = () => {
                   <p className={classes.card__priceValue}>$666</p>
                 </div>
 
-                <BtnRoundPulse text="BOOK NOW!" color="white" />
+                <BtnRoundPulse text="BOOK NOW!" color="white" path="#popup" />
               </div>
             </div>
           </div>
@@ -126,14 +126,14 @@ const ThreeCardsBuy = () => {
                   <p className={classes.card__priceValue}>$777</p>
                 </div>
 
-                <BtnRoundPulse text="BOOK NOW!" color="white" />
+                <BtnRoundPulse text="BOOK NOW!" color="white" path="#popup" />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className={classes.centerText}>
-        <BtnRoundPulse text="Discover our tours!" color="green" />
+        <BtnRoundPulse text="Discover our tours!" color="green" path="#popup" />
       </div>
     </section>
   );
