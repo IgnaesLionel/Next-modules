@@ -7,7 +7,6 @@ import FourSquareInfo from "../components/FourSquareInfo/FourSquareInfo";
 import ThreeCardsBuy from "../components/ThreeCardsBuy/ThreeCardsBuy";
 import Stories from "../components/Stories/Stories";
 import Booking from "../components/Booking/Booking";
-import BackgroundVideo from "../components/BackgroundVideo/BackgroundVideo";
 import Footer00 from "../components/Footer00/Footer00";
 import FullScreenMenu from "../components/FullScreenMenu/FullScreenMenu";
 import PopUp00 from "../components/PopUp00/PopUp00";

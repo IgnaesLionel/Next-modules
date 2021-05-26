@@ -1,11 +1,5 @@
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
-
-$colorGreyLight1: #f7f7f7;
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .centerText {
   text-align: center;
@@ -30,6 +24,14 @@ $colorGreyLight1: #f7f7f7;
   transition: all 0.2s;
   letter-spacing: 0.2rem;
 
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.05);
     text-shadow: 0.5rem 1rem 2rem rgba(rgb(29, 29, 29), 0.2);
@@ -40,6 +42,10 @@ $colorGreyLight1: #f7f7f7;
   padding: 15rem 0;
 
   position: relative;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .story {
@@ -52,6 +58,16 @@ $colorGreyLight1: #f7f7f7;
   font-size: 1.6rem;
   padding-left: 9rem;
   transform: skewX(-12deg);
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
 
   &__shape {
     width: 15rem;
@@ -66,17 +82,23 @@ $colorGreyLight1: #f7f7f7;
     transform: translateX(-3rem) skewX(12deg);
 
     position: relative;
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__img {
     height: 100%;
-    transform: translateX(-4rem) scale(1.4);
+    transform: translateY(0rem) scale(1.4);
     transition: all 0.5s;
     backface-visibility: hidden;
   }
 
   &__text {
     transform: skewX(12deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {

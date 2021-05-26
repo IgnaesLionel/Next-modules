@@ -1,9 +1,14 @@
 import React from "react";
 import BtnSquareArrow from "../BtnSquareArrow/BtnSquareArrow";
+import Image from "next/image";
+
 import classes from "./About.module.scss";
-import photo1 from "./img/nat-1-large.jpg";
-import photo2 from "./img/nat-2-large.jpg";
-import photo3 from "./img/nat-3-large.jpg";
+import photo1L from "./img/nat-1-large.jpg";
+import photo2L from "./img/nat-2-large.jpg";
+import photo3L from "./img/nat-3-large.jpg";
+import photo1 from "./img/nat-1.jpg";
+import photo2 from "./img/nat-2.jpg";
+import photo3 from "./img/nat-3.jpg";
 
 const About = () => {
   return (
@@ -48,21 +53,21 @@ const About = () => {
           </div>
           <div className="col-1-of-2">
             <div className={`${classes.composition}`}>
-              <img
-                src={photo1}
-                alt="Photo 1"
+              <div
                 className={`${classes.composition__photo} ${classes.composition__photo__1}`}
-              />
-              <img
-                src={photo2}
-                alt="Photo 2"
+              >
+                <Image src={photo1L} alt="Photo 1" height={224} width={333} />
+              </div>
+              <div
                 className={`${classes.composition__photo} ${classes.composition__photo__2}`}
-              />
-              <img
-                src={photo3}
-                alt="Photo 3"
+              >
+                <Image src={photo2L} alt="Photo 2" height={224} width={333} />
+              </div>
+              <div
                 className={`${classes.composition__photo} ${classes.composition__photo__3}`}
-              />
+              >
+                <Image src={photo3L} alt="Photo 3" height={224} width={333} />
+              </div>
             </div>
           </div>
         </div>

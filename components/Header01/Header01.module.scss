@@ -1,7 +1,5 @@
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-$color-white: #fff;
+@import "../../styles/abstracts/mixins";
+@import "../../styles/abstracts/variables";
 
 .header {
   height: 95vh; /* 95% */
@@ -17,6 +15,11 @@ $color-white: #fff;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; /* for logobox, on absolute */
   font-size: 62.5%; /* fix for all rem*/
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
 
   &__logoBox {
     position: absolute;
@@ -50,6 +53,12 @@ $color-white: #fff;
     letter-spacing: 3.5rem;
 
     animation: moveInLeft 1s ease-out; /*duration timing-function delay iteration-count direction fill-mode;*/
+
+    @media (max-width: 37.5em) {
+      //phone 600px
+      letter-spacing: 1rem;
+      font-family: 5rem;
+    }
   }
 
   &__sub {
@@ -59,6 +68,10 @@ $color-white: #fff;
     letter-spacing: 1.75rem;
 
     animation: moveInRight 1s ease-out; /*duration timing-function delay iteration-count direction fill-mode;*/
+    @media (max-width: 37.5em) {
+      //phone 600px
+      letter-spacing: 0.5rem;
+    }
   }
 }
 

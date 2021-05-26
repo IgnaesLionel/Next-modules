@@ -1,13 +1,22 @@
-$color-primary: #55c57a;
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .footer {
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem;
 
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
   &__logoBox {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
@@ -19,7 +28,11 @@ $color-primary: #55c57a;
     border-top: 1px solid #eee;
     padding: 2rem;
     display: inline-block;
-    width: 100%;
+
+    @include respond(tab-port) {
+      text-align: center;
+      width: 100%;
+    }
   }
 
   &__list {
@@ -56,6 +69,13 @@ $color-primary: #55c57a;
   &__copyright {
     border-top: 1px solid #eee;
     padding-top: 2rem;
-    width: 100%;
+    width: 80%;
+    float: left;
+
+    @include respond(tab-port) {
+      text-align: center;
+      width: 100%;
+      float: none;
+    }
   }
 }

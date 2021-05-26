@@ -1,14 +1,12 @@
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
-
-$colorGreyLight1: #f7f7f7;
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .marginBottom8 {
   margin-bottom: 8rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .centerText {
@@ -30,6 +28,14 @@ $colorGreyLight1: #f7f7f7;
   transition: all 0.2s;
   letter-spacing: 0.2rem;
 
+  @media (max-width: 56.25em) {
+    font-size: 3rem;
+  } //900px
+
+  @media (max-width: 37.5em) {
+    font-size: 2.5rem;
+  } //600px
+
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.05);
     text-shadow: 0.5rem 1rem 2rem rgba(rgb(29, 29, 29), 0.2);
@@ -40,6 +46,10 @@ $colorGreyLight1: #f7f7f7;
   background-color: $colorGreyLight1;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem;
+
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
 }
 
 .card {
@@ -217,5 +227,48 @@ $colorGreyLight1: #f7f7f7;
   &__priceValue {
     font-size: 6rem;
     font-weight: 100;
+  }
+
+  ////////////////////////////////////////////////////
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &__back {
+        transform: rotateY(0deg);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+    &:hover &__side__front {
+      transform: rotateY(0deg);
+    }
+
+    // back side
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__priceBox {
+      margin-bottom: 3rem;
+    }
+
+    &__priceValue {
+      font-size: 4rem;
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
   }
 }

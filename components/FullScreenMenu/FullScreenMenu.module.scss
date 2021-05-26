@@ -1,12 +1,7 @@
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .navigation {
-  background-color: orangered;
   &__checkbox {
     display: none;
   }
@@ -44,6 +39,16 @@ $color-tertiary-dark: #5643fa;
     box-shadow: 0 1rem 3rem rgba(black, 0.1);
     text-align: center;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
   &__background {
     height: 6rem;
@@ -59,6 +64,16 @@ $color-tertiary-dark: #5643fa;
     z-index: 1000;
     transition: transform 0.8s;
     //transform: scale(80);
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__item {

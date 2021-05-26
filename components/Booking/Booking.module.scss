@@ -1,6 +1,5 @@
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-$color-secondary-dark: #ff7730;
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
 
 .sectionBook {
   padding: 15rem 0;
@@ -9,6 +8,10 @@ $color-secondary-dark: #ff7730;
     $color-primary-light,
     $color-primary-dark
   );
+
+  @include respond(tab-port) {
+    padding: 10rem;
+  }
 }
 
 .book {
@@ -19,14 +22,39 @@ $color-secondary-dark: #ff7730;
       transparent 50%
     ),
     url(./img/nat-10.jpg);
-  background-size: cover;
-  height: 50rem;
+
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(black, 0.2);
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(white, 0.9) 0%,
+        rgba(white, 0.9) 70%,
+        transparent 70%
+      ),
+      url(./img/nat-10.jpg);
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba(white, 0.9) 0%,
+        rgba(white, 0.9) 100%
+      ),
+      url(./img/nat-10.jpg);
+  }
 
   &__form {
     width: 50%;
     padding: 6rem;
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }
 
@@ -53,6 +81,14 @@ $color-secondary-dark: #ff7730;
   transition: all 0.2s;
   letter-spacing: 0.2rem;
 
+  @media (max-width: 56.25em) {
+    font-size: 3rem;
+  } //900px
+
+  @media (max-width: 37.5em) {
+    font-size: 2.5rem;
+  } //600px
+
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.05);
     text-shadow: 0.5rem 1rem 2rem rgba(rgb(29, 29, 29), 0.2);
@@ -76,6 +112,10 @@ $color-secondary-dark: #ff7730;
     width: 90%;
     display: block;
     transition: all 2.4;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
 
     &::-webkit-input-placeholder {
       color: #999;
@@ -111,6 +151,11 @@ $color-secondary-dark: #ff7730;
     width: 45%;
 
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio__input {
