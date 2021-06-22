@@ -56,17 +56,38 @@ const About = () => {
               <div
                 className={`${classes.composition__photo} ${classes.composition__photo__1}`}
               >
-                <Image src={photo1L} alt="Photo 1" height={224} width={333} />
+                <Image
+                  src={photo1L}
+                  alt="Photo 1"
+                  height={224}
+                  width={333}
+                  layout="responsive"
+                  quality={30}
+                />
               </div>
               <div
                 className={`${classes.composition__photo} ${classes.composition__photo__2}`}
               >
-                <Image src={photo2L} alt="Photo 2" height={224} width={333} />
+                <Image
+                  src={photo2L}
+                  alt="Photo 2"
+                  height={224}
+                  width={333}
+                  layout="responsive"
+                  quality={30}
+                />
               </div>
               <div
                 className={`${classes.composition__photo} ${classes.composition__photo__3}`}
               >
-                <Image src={photo3L} alt="Photo 3" height={224} width={333} />
+                <Image
+                  src={photo3L}
+                  alt="Photo 3"
+                  height={224}
+                  width={333}
+                  layout="responsive"
+                  quality={30}
+                />
               </div>
             </div>
           </div>

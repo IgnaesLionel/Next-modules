@@ -16,7 +16,11 @@ const Header = () => {
             is where life happens
           </span>
         </h1>
-        <BtnPulseSass text="Discover our tours!" color="white" />
+        <BtnPulseSass
+          text="Discover our tours!"
+          color="white"
+          path="#section-tours"
+        />
       </div>
     </header>
   );

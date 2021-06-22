@@ -3,7 +3,6 @@ import classes from "./Stories.module.scss";
 import photo1 from "./img/nat-8.jpg";
 import photo2 from "./img/nat-9.jpg";
 import BtnSquareArrow from "../BtnSquareArrow/BtnSquareArrow";
-import Image from "next/image";
 
 const Stories = () => {
   return (
@@ -53,13 +52,12 @@ const Stories = () => {
       <div className="row">
         <div className={classes.story}>
           <figure className={classes.story__shape}>
-            <Image
-              src={photo2}
-              alt="Photo 2"
-              height={224}
-              width={333}
+            {" "}
+            <img
               className={classes.story__img}
-            />
+              src={photo2}
+              alt="Person on a tour"
+            ></img>
             <figcaption className={classes.story__caption}>John Doe</figcaption>
           </figure>
           <div className={classes.story__text}>

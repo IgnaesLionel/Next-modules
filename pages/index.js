@@ -10,13 +10,13 @@ import Booking from "../components/Booking/Booking";
 import Footer00 from "../components/Footer00/Footer00";
 import FullScreenMenu from "../components/FullScreenMenu/FullScreenMenu";
 import PopUp00 from "../components/PopUp00/PopUp00";
+import NextBackground from "../components/NextBackground/NextBackground";
 
 export default function Home() {
   return (
     <div>
       <FullScreenMenu />
       <Header01 />
-
       <About />
       <FourSquareInfo />
       <ThreeCardsBuy />
@@ -24,6 +24,7 @@ export default function Home() {
       <Booking />
       <Footer00 />
       <PopUp00 />
+      <NextBackground />
     </div>
   );
 }
